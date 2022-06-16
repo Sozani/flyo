@@ -302,9 +302,10 @@ color: rgb(8, 8, 8);
 .with-text{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .with-text span{
-    color: var(--light-red-error);
+    
     margin-left: 30px;
     font-family: var(--body-fontfontfamily);
     margin-top: 10px;
@@ -319,6 +320,26 @@ color: rgb(8, 8, 8);
   margin-left: 40px;
   display: inline-block;
   cursor: pointer;
+}
+#form.invalid .with-text::before{
+    content: "";
+    position: absolute;
+    right: 20px;
+    width: 24px;
+    top: 18px;
+    height: 24px;
+    background: url(./invalid.png);
+    background-size: cover;
+}
+#form.valid .with-text::before{
+    content: "";
+    position: absolute;
+    right: 20px;
+    width: 24px;
+    top: 18px;
+    height: 24px;
+    background: url(./valid.png);
+    background-size: cover;
 }
 /* create footer section */
 footer {

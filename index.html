@@ -252,6 +252,12 @@ text.style.color ="#0e9634";
   text.innerHTML = `please inter a valid email address`;
   text.style.color ="hsl(0, 100%, 63%)";
 }
+if(email == ""){
+  form.classList.remove("valid");
+  form.classList.remove("invalid");
+  text.innerHTML = "";
+
+}
 }
   
   </script>
