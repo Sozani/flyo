@@ -26,6 +26,9 @@ body {
   background-color: var(--main-background);
   position: relative;
 }
+main{
+    position: relative;
+}
 /* create navigation bar */
 nav {
   display: flex;
@@ -181,15 +184,15 @@ p {
 
 /* create componenant section */
 .componenant {
-  width: 90%;
+  width: 85%;
   position: relative;
   display: grid;
-  margin: auto;
+  margin:auto;
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(3,1fr);
 gap: 30px;
-  margin-bottom: 200px;
+  margin-bottom:400px ;
   font-family: var(--headings-call-to-actions-header-Navigation-fontfamily);
 }
 .componenant .quotes {
@@ -200,6 +203,14 @@ gap: 30px;
   z-index: -1;
   left: 15px;
   top: -66px;
+}
+#with-quotes::before{
+content: url(./images/bg-quotes.png);
+position: absolute;
+z-index: -1;
+bottom: 180px;
+left: -3px;
+
 }
 .componenant .content {
   /* margin-left: 30px; */
@@ -240,16 +251,19 @@ gap: 30px;
 .contact {
   width: 60%;
   height: 300px;
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
-  margin: auto;
+  /* margin: auto; */
   justify-content: center;
   align-items: center;
   background-color: var(--intro-and-email-sign-up-background);
   /* padding: 50px; */
   margin-top: 200px;
   z-index: 50;
+  left: 20%;
+ bottom: -550px;
+
 }
 .contact h1 {
   font-weight: 700;
@@ -262,15 +276,39 @@ gap: 30px;
   margin-bottom: 40px;
   font-size: 14px;
 }
-
+.example{
+    display: flex;
+    
+}
 .example input {
-  padding: 20px 100px;
+  padding: 20px ;
   border-radius: 50px;
+  outline: none;
+  height: 60px;
+  width: 450px;
+  text-align: start;
+ 
+}
+.example input:focus{
+color: rgb(8, 8, 8);
+
 }
 .example input::placeholder {
-  text-align: start;
+ 
   color: cadetblue;
   opacity: 0.4;
+  
+}
+.with-text{
+    display: flex;
+    flex-direction: column;
+}
+.with-text span{
+    color: var(--light-red-error);
+    margin-left: 30px;
+    font-family: var(--body-fontfontfamily);
+    margin-top: 10px;
+    /* visibility: hidden; */
 }
 .example button {
   color: var(--Neutral-White);
@@ -284,7 +322,7 @@ gap: 30px;
 }
 /* create footer section */
 footer {
-  height: 400px;
+  height: 500px;
   background-color: var(--footer-background);
 
   width: 100%;
@@ -297,6 +335,7 @@ footer {
 
   ul li {
     margin-left: 20px;
+  
   }
 
   h1 {

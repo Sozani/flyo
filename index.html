@@ -100,7 +100,7 @@
       <div class="componenant">
        
        
-        <div class="content" >
+        <div class="content" id="with-quotes" >
          
           <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
             become a well-oiled collaboration machine.</p>
@@ -147,7 +147,12 @@
           questions, our support team would be happy to help you.
         </p>
         <div class="example">
-          <input type="email" placeholder="email@example.com">
+          <form action="" id="form">
+          <div class="with-text">
+          <input type="email" id="email" placeholder="email@example.com" onkeydown="validation()">
+<span  id ="text"> </span>
+</form>
+        </div>
           <button>Get Started For Free</button>
         </div>
       </div>
@@ -230,5 +235,25 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer> -->
+  <script>
+function validation(){
+  let text = document.getElementById("text");
+  let email = document.getElementById("email").value;
+  let form = document.getElementById("form");
+let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+if(email.match(pattern)){
+form.classList.add("valid");
+form.classList.remove("invalid");
+text.innerHTML = `a valid email address`;
+text.style.color ="#0e9634";
+}else{
+  form.classList.remove("valid");
+  form.classList.add("invalid");
+  text.innerHTML = `please inter a valid email address`;
+  text.style.color ="hsl(0, 100%, 63%)";
+}
+}
+  
+  </script>
 </body>
 </html>
