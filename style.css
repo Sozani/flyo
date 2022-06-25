@@ -19,15 +19,15 @@
 }
 body {
   max-width: 100%;
-  height:100vh;
+  height: 100vh;
   margin: auto;
   color: var(--Neutral-White);
   font-size: var(--main-font-size);
   background-color: var(--main-background);
   position: relative;
 }
-main{
-    position: relative;
+main {
+  position: relative;
 }
 /* create navigation bar */
 nav {
@@ -54,12 +54,11 @@ ul li a {
   margin-left: 50px;
 
   color: var(--Neutral-White);
-  
 }
-ul li a:hover{
-    text-decoration: underline;
-   font-size: 16px;
-   font-family: var(--body-fontfontfamily)
+ul li a:hover {
+  text-decoration: underline;
+  font-size: 16px;
+  font-family: var(--body-fontfontfamily);
 }
 /* create illustration intro section */
 .illustration-intro {
@@ -73,8 +72,7 @@ ul li a:hover{
 }
 .illustration-intro img {
   margin-bottom: 25px;
-  /* max-width: 534px;
-min-height: 720px; */
+
   width: 100%;
   height: auto;
 }
@@ -145,10 +143,11 @@ p {
   margin-left: 100px;
   position: relative;
 }
-.stay-productive-son img {
+.whole-productive .to {
   width: 70%;
   height: auto;
-  margin-right: 200px;
+  margin-right: 20px;
+  margin-bottom: 40px;
 }
 .stay-productive-son h1 {
   font-size: 3.5em;
@@ -161,12 +160,12 @@ p {
 }
 .stay-productive-son a {
   color: var(--Cyan-inside-call-to-action-gradient);
-  /* padding: 5px; */
+
   display: inline-block;
   font-family: var(--body-fontfontfamily);
   font-weight: 700;
   text-decoration: none;
- 
+
   padding-bottom: 5px;
 }
 .stay-productive-son img {
@@ -179,7 +178,7 @@ p {
 .anchor {
   position: relative;
   border-bottom: 1px solid #047cea;
-  width: 25%;
+  width: 50%;
 }
 
 /* create componenant section */
@@ -187,43 +186,40 @@ p {
   width: 85%;
   position: relative;
   display: grid;
-  margin:auto;
+  margin: auto;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(3,1fr);
-gap: 30px;
-  margin-bottom:400px ;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 400px;
   font-family: var(--headings-call-to-actions-header-Navigation-fontfamily);
 }
 .componenant .quotes {
   width: 50px;
   height: 50px;
   position: relative;
-  /* align-self: center; */
+
   z-index: -1;
   left: 15px;
   top: -66px;
 }
-#with-quotes::before{
-content: url(./images/bg-quotes.png);
-position: absolute;
-z-index: -1;
-bottom: 180px;
-left: -3px;
-
+#with-quotes::before {
+  content: url(./images/bg-quotes.png);
+  position: absolute;
+  z-index: -1;
+  bottom: 180px;
+  left: -3px;
 }
 .componenant .content {
-  /* margin-left: 30px; */
   text-align: start;
   background-color: var(--testimonials-background);
   padding: 30px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  /* margin-left: 60px; */
+
   justify-content: center;
   height: 200px;
-/* width: 300px; */
 }
 .componenant img {
   width: 40px;
@@ -254,21 +250,21 @@ left: -3px;
   position: absolute;
   display: flex;
   flex-direction: column;
-  /* margin: auto; */
+
   justify-content: center;
   align-items: center;
   background-color: var(--intro-and-email-sign-up-background);
-  /* padding: 50px; */
+
   margin-top: 200px;
   z-index: 50;
   left: 20%;
- bottom: -550px;
-margin-bottom: 20px;
+  bottom: -550px;
+  margin-bottom: 20px;
 }
 .contact h1 {
   font-weight: 700;
   text-align: center;
-  /* margin-bottom: 20px; */
+
   margin-top: 150px;
 }
 .contact p {
@@ -276,40 +272,33 @@ margin-bottom: 20px;
   margin-bottom: 40px;
   font-size: 14px;
 }
-.example{
-    display: flex;
-    
+.example {
+  display: flex;
 }
 .example input {
-  padding: 20px ;
+  padding: 20px;
   border-radius: 50px;
   outline: none;
   height: 60px;
   width: 450px;
   text-align: start;
- 
 }
-.example input:focus{
-color: rgb(8, 8, 8);
-
+.example input:focus {
+  color: rgb(8, 8, 8);
 }
 .example input::placeholder {
- 
   color: cadetblue;
   opacity: 0.4;
-  
 }
-.with-text{
-    display: flex;
-    flex-direction: column;
-    position: relative;
+.with-text {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
-.with-text span{
-    
-    margin-left: 30px;
-    font-family: var(--body-fontfontfamily);
-    margin-top: 10px;
-    /* visibility: hidden; */
+.with-text span {
+  margin-left: 30px;
+  font-family: var(--body-fontfontfamily);
+  margin-top: 10px;
 }
 .example button {
   color: var(--Neutral-White);
@@ -321,212 +310,382 @@ color: rgb(8, 8, 8);
   display: inline-block;
   cursor: pointer;
 }
-#form.invalid .with-text::before{
-    content: "";
-    position: absolute;
-    right: 20px;
-    width: 24px;
-    top: 18px;
-    height: 24px;
-    background: url(./invalid.png);
-    background-size: cover;
+#form.invalid .with-text::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  width: 24px;
+  top: 18px;
+  height: 24px;
+  background: url(./invalid.png);
+  background-size: cover;
 }
-#form.valid .with-text::before{
-    content: "";
-    position: absolute;
-    right: 20px;
-    width: 24px;
-    top: 18px;
-    height: 24px;
-    background: url(./valid.png);
-    background-size: cover;
+#form.valid .with-text::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  width: 24px;
+  top: 18px;
+  height: 24px;
+  background: url(./valid.png);
+  background-size: cover;
 }
 /* create footer section */
 footer {
   height: 500px;
   background-color: var(--footer-background);
-position: relative;
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.ffooter{
+.ffooter {
   width: 90%;
   height: 20%;
   position: absolute;
- margin-top: 250px;
+  margin-top: 250px;
   text-align: center;
   display: grid;
-  grid-template-columns:300px 170px  100px  100px  100px;
-
+  grid-template-columns: 300px 170px 100px 100px 100px;
 
   gap: 50px;
   justify-content: space-evenly;
 }
 
-.ffooter .col-1{
+.ffooter .col-1 {
   display: flex;
   flex-direction: column;
 }
-.ffooter .col-1 .icon-div1{
+.ffooter .col-1 .icon-div1 {
   display: flex;
- 
 }
 
-
-.ffooter .logo-2{
+.ffooter .logo-2 {
   width: 150px;
   margin-bottom: 30px;
-
 }
-.ffooter .col-2{
+.ffooter .col-2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-margin-top: 50px;
+  margin-top: 50px;
 }
-.ffooter  a{
+.ffooter a {
   color: #fff;
   text-decoration: none;
   font-family: var(--body-fontfontfamily);
- 
 }
-.ffooter  a:hover{
+.ffooter a:hover {
   color: var(--Cyan-inside-call-to-action-gradient);
 }
-.ffooter .col-2 .tele{
+.ffooter .col-2 .tele {
   margin-left: 20px;
 }
- .teleo{
+.teleo {
   margin-left: 20px;
 }
-.ffooter .col-3{
+.ffooter .col-3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-top: 50px;
 }
-.ffooter .col-4{
+.ffooter .col-4 {
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content: space-between;
   margin-top: 50px;
 }
-.ffooter .col-5{
+.ffooter .col-5 {
   display: flex;
   margin-top: 50px;
   justify-content: space-between;
- 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 375px)  {
+@media only screen and (max-width: 375px) {
   body {
-    background-color: lightblue;
-  
+    background-color: rgb(5, 136, 145);
   }
-  .main-middle-icons {
-    max-width: 100%;
-   
-   
-    grid-template-columns: repeat(1, 1fr);
-    /* grid-template-rows: 1fr; */
-    gap: 10px;
-    margin-bottom: 150px;
-   
-   
-  }
+
   nav {
-   margin-right: auto;
+    margin-right: auto;
     margin-left: auto;
   }
-  .logoi{
+  .logoi {
     width: 100px;
   }
   ul li a {
-   
-    margin-left: 5px;
-  
-   
-    
+    margin-left: 10px;
   }
-  h1 {
-    font-size: 3.5em;
-    text-align: center;
-    font-weight: 700;
-    font-family: var(--body-fontfontfamily);
-    margin-bottom: 25px;
+  h3 {
+    font-size: 1.2em;
+  }
+  button {
+    padding: 10px 50px;
+
+    border-radius: 50px;
+    font-size: 1em;
+    outline: none;
   }
   h1 {
     font-size: 2em;
-   
   }
   .whole-productive {
     max-width: 100%;
     margin: auto;
     display: flex;
-   flex-direction: column;
+    flex-direction: column;
+    align-items: center;
   }
+
   .stay-productive-son {
     margin-left: auto;
     margin-right: auto;
+
+    width: 80%;
+    margin-bottom: 100px;
+  }
+  
+  .stay-productive-son h2 {
+    font-size: 1.5em;
+    font-family: var(--body-fontfontfamily);
+    margin-bottom: 25px;
+  }
+  .anchor {
     position: relative;
+    border-bottom: 1px solid #047cea;
+    width: 50%;
   }
   .componenant {
-    width: 100%;
-   
     grid-template-columns: 1fr;
 
+    width: 85%;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 50px;
+    margin-bottom: 400px;
+    font-family: var(--headings-call-to-actions-header-Navigation-fontfamily);
   }
   .contact {
     width: 90%;
-  
-   
-    /* margin: auto; */
-  
-    left: 0;
-  
+    margin: auto;
+
+    left: 15px;
   }
   .contact h1 {
-   
-   font-size: 25px;
-    /* margin-bottom: 20px; */
-   
+    font-size: 25px;
   }
-  .example{
+  .example {
     display: flex;
-   flex-direction: column; 
-}
-  
+    flex-direction: column;
+  }
+
   .example input {
-    padding: 20px ;
+    padding: 20px;
     border-radius: 50px;
-   
+
     height: 30px;
     width: 250px;
     text-align: start;
-   
   }
   .example button {
-   
     padding: 10px 50px;
-   
+
     margin-left: auto;
     margin-right: auto;
-   
   }
- 
+  .main-middle-icons {
+    max-width: 80%;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 150px;
+  }
+  .main-middle-icons .one {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .main-middle-icons .two {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .main-middle-icons .three {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .main-middle-icons .four {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  footer {
+    height: 1000px;
+
+    display: flex;
+    justify-content: center;
+  }
+  .ffooter {
+    width: 90%;
+    height: 80%;
+
+    margin-top: 200px;
+
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+    justify-content: start;
+  }
+  .ffooter .col-5 {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 376px) and (max-width: 900px){
+  body {
+    background-color: rgb(247, 45, 187);
+  }
+
+  nav {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .logoi {
+    width: 100px;
+  }
+  ul li a {
+    margin-left: 20px;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  button {
+    padding: 15px 75px;
+
+    border-radius: 50px;
+    font-size: 1em;
+    outline: none;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  .whole-productive {
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stay-productive-son {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 80%;
+    margin-bottom: 100px;
+  }
   
+  .stay-productive-son h2 {
+    font-size: 1.5em;
+    font-family: var(--body-fontfontfamily);
+    margin-bottom: 25px;
+  }
+  .anchor {
+    position: relative;
+    border-bottom: 1px solid #047cea;
+    width: 50%;
+  }
+  .componenant {
+    grid-template-columns: 1fr;
+
+    width: 85%;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 50px;
+    margin-bottom: 400px;
+    font-family: var(--headings-call-to-actions-header-Navigation-fontfamily);
+  }
+  .contact {
+    width: 90%;
+    margin: auto;
+
+    left: 30px;
+  }
+  .contact h1 {
+    font-size: 25px;
+  }
+  .example {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .example input {
+    padding: 20px;
+    border-radius: 50px;
+
+    height: 30px;
+    width: 250px;
+    text-align: start;
+  }
+  .example button {
+    padding: 10px 50px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main-middle-icons {
+    max-width: 80%;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 150px;
+  }
+  .main-middle-icons .one {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .main-middle-icons .two {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .main-middle-icons .three {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .main-middle-icons .four {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  footer {
+    height: 1000px;
+
+    display: flex;
+    justify-content: center;
+  }
+  .ffooter {
+    width: 90%;
+    height: 80%;
+
+    margin-top: 200px;
+
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+    justify-content: start;
+  }
+  .ffooter .col-5 {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+  }
+  .col-5 a{
+    margin-left: 20px;
+  }
 }
